@@ -1,0 +1,25 @@
+# a program that tests the compatibility between two people.
+# To work out the love score between two people: Take both people's names and check for the number of times the letters in the word TRUE occurs. Then check for the number of times the letters in the word LOVE occurs. Then combine these numbers to make a 2 digit number.
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+first_Name = name1.lower() + name2.lower()
+T = first_Name.count("t")
+R = first_Name.count("r")
+U = first_Name.count("u")
+E = first_Name.count("e")
+TRUE = T + R + U + E
+L = first_Name.count("l")
+O = first_Name.count("o")
+V = first_Name.count("v")
+E = first_Name.count("e")
+LOVE = L +O + V + E
+TRUELOVE = int(str(TRUE) + str(LOVE))
+if TRUELOVE < 10 or TRUELOVE > 90:
+    print(f"Your score is {TRUELOVE}, you go together like coke and mentos.")
+elif TRUELOVE > 40 and TRUELOVE < 50:
+    print(f"Your score is {TRUELOVE}, you are alright together")
+else:
+    print(f"Your score is {TRUELOVE}.")
