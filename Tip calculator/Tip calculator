@@ -1,0 +1,9 @@
+# A program that splits a bill between a specified amount of people. The program will ask for the total bill, the number of people splitting the bill, and the tip percentage.
+print("Welcome to the tip calculator.")
+bill = float(input("What was the total amount £\n"))
+per_tip = int(input("What percentage tip would you like to give? 10, 12, or 15\n"))
+spl_bill = int(input("How many people to split the bill\n"))
+sbill = per_tip / 100 * bill + bill
+sbill = sbill / spl_bill
+sbill = round(sbill, 2)
+print(f"Each person should pay £{sbill}")
